@@ -1,0 +1,41 @@
+// Shell Scripting
+
+// basically just unix commands in a file
+
+Nut_maker.sh {
+
+Task: cd into a directory and make a file named nut.txt and add text of your choice to it
+
+How to do it {
+  Step1: make the directory a variable in your script that you set to wherever,
+  Step2: cd into the directory (hint use $VARIABLE)
+  Step3: create nut file
+  Step4: add nut content
+  Step5: print 'done' or 'skrt'.  whichever you like better
+}
+}
+
+Make Nut_maker.sh adaptive {
+
+Task: Make Nut_maker.sh cd into a directory that you give as a parameter
+
+How to do it {
+  Step1: to get the first parameter of a command use $1, the second is $2, etc.
+  Step2: that's it.
+}
+}
+
+Verify file exists {
+
+Task: Write a script to tell you if a file given as a parameter in fact exists
+
+How to do it {
+  Step1: take the output of the ls command on the file, pipe it to the wc -l (word count) command, and save it to a variable.
+         do this with VARIABLE=$(ls $PARAM | wc -l)
+  Step2: check if the variable is equal to 0
+	 do this with an IF statement.  if [[ $VARIABLE -eq 0 ]] then; BOOGITYWOOGITY; fi
+	 it will help to google how to do an if statement in bash, I'm not great with them
+  Step3: in your if statement echo 'no'
+  Step4: Fin
+}
+}
