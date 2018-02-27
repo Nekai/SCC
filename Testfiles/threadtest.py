@@ -6,7 +6,7 @@ ans = -1
 def wait_in():
   while(ans < 0):
     print("nut")
-    time.sleep(5)
+    time.sleep(1)
   print("hey bud")
 
 th1 = threading.Thread(None, wait_in, "Thread-1")
