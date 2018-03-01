@@ -13,18 +13,6 @@ How to do it {
 }
 }
 
-Intro to IF THEN {
-
-Task: Introduce and explain IF THEN Statements. 
-
-}
-
-Intro to For Loops {
-
-Task: Possibly introduce For Loops
-
-}
-
 Verify File Exists {
 
 Task: Verify that a file exists and if so, read what is in the file.
@@ -46,6 +34,20 @@ How to do it {
    Step4: Done
 
 }
+
+Intro to IF THEN {
+
+Task: Introduce and explain IF THEN Statements.
+
+}
+
+Intro to For Loops {
+
+Task: Possibly introduce For Loops
+
+}
+
+
 }
 
 If finished:
