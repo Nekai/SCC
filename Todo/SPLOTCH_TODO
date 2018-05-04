@@ -1,0 +1,59 @@
+Alright, so far we have hopefully completed the following tasks:
+  - Signed up on slack
+  - Completed the command line tutorial on Codecademy
+  - Gone through the Unix101 slides at rcac.purdue.edu
+  - Learned and practiced how shell scripts work
+  - Learned basic cluster architecture from the slides
+
+If you have not done all of those please complete them in that order.
+
+So we have learned about general concepts like unix commands, scripting, and the queue.
+Now we finally need to put that knowledge to use and run a scientific app.  The app we
+are going to use is Splotch, a visualization tool for astrophysics simulations.  It 
+sounds complicated but what we're doing really isn't.  We're just going to make some
+pretty pictures.
+
+Start by pulling our SCC github repo with:
+
+git clone https://github.com/Nekai/SCC
+
+Inside you should find a file splotch.tgz.  That's a compressed file that holds all
+the files we'll need to run splotch, exactly like a .zip file.  You can uncompress it
+by using the tar command:
+
+tar -xzf splotch.tgz
+** Please extract it outside of the SCC folder
+
+Inside the splotch folder you should see all the files you need, including a binary
+simply called splotch and a parameter file with a .par extension.  You can run
+splotch using:
+
+./splotch parfile.par
+** Note that parfile.par should be replaced with whatever your parameter file is
+***** Remember not to run apps on the frontend
+
+Before you run it you will want to run:
+
+module load gcc openmpi
+
+Those are to load the open source compilers instead of the proprietary Intel ones.
+Sometimes you need to build an app with gcc rather than intel, but intel is preferable.
+
+Once it runs you should see a .tga file, which is the output image.  You can convert 
+this to a .jpg with the convert command
+
+convert INPUT_FILE OUTPUT_FILE
+** Note that INPUT_FILE and OUTPUT_FILE should be replaced with whatever you want your
+   input and output files to be
+
+You can view this image in thinlinc with the desktop tools.
+
+If you've gotten this all done, try to automate the entire process by making a shell
+script that can do everything that is needed to run splotch and try to submit it to 
+the queue.  If you want, you should also make a script to download and setup splotch.
+Practice your shell scripting with the app.
+
+If you're all done and want some more work to do, try going through the Clusters101
+slides at rcac.purdue.edu.  They should be in the same place as the Unix101 slides.
+
+If you have any questions at all please let one of us know or send a message in slack.
